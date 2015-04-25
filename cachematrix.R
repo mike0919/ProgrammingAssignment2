@@ -1,6 +1,6 @@
 ##*******************************************************************************
-## This the R programming Assignment #2.
-## There are 2 functions.
+## This is the R programming Assignment #2.
+## There are 2 functions:
 ## 1. makeCacheMatrix : to return a special matrix that has 4 functions in a list
 ## 2. cacheSolve: to return the inverse of the special matrix from either cache 
 ##    result or calculate it in real time.
