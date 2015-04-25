@@ -10,7 +10,7 @@
 ## This function returns 4 functions in a list: set, get, setinverse, getinverse.
 ## e.g. x <- matrix(1:4, nrow = 2, ncol = 2),
 ##      f <- makeCacheMatrix(x)
-##      f will have $set, $get, $setinverse, and $getinverse four functions.
+##      f will have $set, $get, $setinverse, and $getinverse total 4 functions.
 makeCacheMatrix <- function(x = matrix()) {
         #inv is a local variable for saving inverse matrix of a special matrix
         inv <- NULL 
@@ -34,9 +34,10 @@ makeCacheMatrix <- function(x = matrix()) {
              getinverse = getinverse)
 }
 
-## This function returns 4 functions in a list: set, get, setinverse, getinverse.
-## e.g. x <- matrix(1:4, nrow = 2, ncol = 2),
-##      f <- makeCacheMatrix(x)
+## This function returns a inverse matrix of the special matrix.
+## If the special matrix already has a calculated inverse matrix, return it directly.
+## Otherwise, calculate the inverse matrix in real time and return it while 
+## saving it into the special matrix's cache.
 cacheSolve <- function(x, ...) {
         #inv is a local variable for saving inverse matrix of a special matrix
         inv <- x$getinverse()
